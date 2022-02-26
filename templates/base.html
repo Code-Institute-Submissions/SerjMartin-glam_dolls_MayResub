@@ -4,9 +4,11 @@
 <html lang="en">
   <head>
     {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
     {% endblock %}
 
     {% block extra_meta %}
@@ -41,7 +43,7 @@
     <!--message container-->
     {% if messages %}
         <div class="message-container"></div>
-    {% endblock %}
+    {% endif %}
 
     <!--page header block-->
     {% block page_header %}
