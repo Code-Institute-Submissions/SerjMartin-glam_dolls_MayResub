@@ -1,0 +1,17 @@
+/* font-family: 'Lato', sans-serif;
+font-family: 'Teko', sans-serif; */
+
+/* base html */
+
+body {
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnmzBMXb8HJJ5ajGPv1F1EubRtjXeyxjAUOg&usqp=CAU') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* header */
+
+.logo {
+    font-family: 'Lato', sans-serif;
+    font-size: 200%;
+    color: black;
+}
