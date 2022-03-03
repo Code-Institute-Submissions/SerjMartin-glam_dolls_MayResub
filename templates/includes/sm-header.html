@@ -1,0 +1,59 @@
+<div class="d-lg-none d-block">
+    <ul class="list-inline list-unstyled text-center mt-4">
+        <li class="list-inline-item">
+            <div class="container-fluid dropdown">
+                <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li class="dropdown-item" ><a href="{% url 'home' %}" class="nav-link text-black">Home</a></li>
+                    <li class="dropdown-item dropdown">
+                        <div class="dropdown">
+                            <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Treatments
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="" class="dropdown-item">Nail Care</a></li>
+                            <li><a href="" class="dropdown-item">Eye Care</a></li>
+                            <li><a href="" class="dropdown-item">Facials</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown-item dropdown ">
+                        <div class="dropdown">
+                            <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gift Cards
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                            {% if request.user.is_authenticated %}
+                                <li><a href="" class="dropdown-item">My Profile</a></li>
+                                <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                            {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        {% if request.user.is_authenticated %}
+        <li class="list-inline-item">
+          <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+              <div class="text-center">
+                  <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                  <p class="my-0">
+                      {% if grand_total %}
+                          ${{ grand_total|floatformat:2 }}
+                      {% else %}
+                          $0.00
+                      {% endif %}
+                  </p>
+              </div>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+</div>
