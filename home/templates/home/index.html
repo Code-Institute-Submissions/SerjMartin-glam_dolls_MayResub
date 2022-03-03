@@ -2,8 +2,46 @@
 {% load static %}
 
 {% block content %}
-    <div class="container-flex img-fluid"></div>
-    <div class="container-fluid text-center mt-3">
-        <h2>- What we can do for you -</h2>
+    <div class="container-fluid">
+        <div class="countaner-fluid img-fluid"></div>
+        <div class="container-fluid text-center mt-5 ">
+            <p class="text-muted fs-3">all treatments</p>
+            <h2>- What we can do for you -</h2>
+        </div>
+        <div class="container-fluid text-center icon-div">
+            <ul class="list-inline list-unstyled">
+                <li class="list-inline-item m-5">
+                    <a href="#">
+                        <div class="card border border-white" style="width: 14rem;">
+                            <img src="/media/nail-icon.jpeg" class="card-img-top" alt="nailcare">
+                            <div class="card-body text-center">
+                            <h3 class="card-title">Nail Care</h3>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-inline-item m-5">
+                    <a href="#">
+                        <div class="card border border-white" style="width: 14rem;">
+                            <img src="/media/eye-icon.png" class="card-img-top" alt="eyecare">
+                            <div class="card-body text-center">
+                            <h3 class="card-title">Eye Care</h3>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-inline-item m-5">
+                    <a href="#">
+                        <div class="card border border-white" style="width: 14rem;">
+                            <img src="/media/facial-icon.jpeg" class="card-img-top" alt="facial">
+                            <div class="card-body text-center">
+                            <h3 class="card-title">Facials</h3>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        {% include 'includes/footer.html' %}
     </div>
 {% endblock %}
