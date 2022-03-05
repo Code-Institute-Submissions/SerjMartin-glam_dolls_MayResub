@@ -52,28 +52,40 @@
                   Treatments
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><a href="{% url 'treatments' %}" class="dropdown-item">All Treatments</a></li>
                   <li><a href="" class="dropdown-item">Nail Care</a></li>
                   <li><a href="" class="dropdown-item">Eye Care</a></li>
                   <li><a href="" class="dropdown-item">Facials</a></li>
                 </ul>
               </div>
             </li>
-            <li class="list-inline-item dropdown">
-              <div class="dropdown">
-                <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                  Gift Cards
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  {% if request.user.is_authenticated %}
-                    <li><a href="" class="dropdown-item">My Profile</a></li>
-                    <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
-                  {% else %}
+            {% if request.user.is_authenticated %}
+              <li class="list-inline-item">
+                <a href="{% url 'account_logout' %}">
+                    <button class="btn btn-white" type="button">
+                      Logout
+                    </button>
+                  </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="{% url 'products' %}">
+                  <button class="btn btn-white" type="button">
+                    Gift Card
+                  </button>
+                </a>
+              </li>
+            {% else %}
+              <li class="list-inline-item">
+                <div class="dropdown">
+                  <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                    Gift Cards
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                     <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                  {% endif %}
-                </ul>
-              </div>
-            </li>
+                  </ul>
+              </li>
+            {% endif %}
             {% if request.user.is_authenticated %}
             <li class="list-inline-item">
               <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
