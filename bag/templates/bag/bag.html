@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-4">
+                <h2 class="logo-font">Shoping Bag</h2>
+                <hr class="w-30">
+            </div>
+            <div class="row">
+                <div class="col">
+                    {% if bag_items %}
+                        <div class="table-responsive rounded"></div>
+                    {% else %}
+                        <p class="lead mb-5">You bag is empty.</p>
+                        <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg">
+                            <span class="icon">
+                                <i class="fas fa-shevron-left"></i>
+                            </span>
+                            <span class="ext-uppercase">Keep shopping</span>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% include 'includes/icons.html' %}
+        {% include 'includes/footer.html' %}
+    </div>
+{% endblock %}
