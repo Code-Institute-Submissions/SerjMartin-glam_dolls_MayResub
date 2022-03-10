@@ -11,9 +11,53 @@
             <div class="row">
                 <div class="col">
                     {% if bag_items %}
-                        <div class="table-responsive rounded">
-                            {{ bag_items }}
-                        </div>
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                            <tr class="text-center">
+                                <th scope="col">Voucher type</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for item in bag_items%}
+                                <tr class="text-center">
+                                    <td class="col-4 pt-3">
+                                        <img class="img-thumbnail border-dark rounded" src="{{ item.product.image.url }}">
+                                    </td>
+                                    <td class="col-2 pt-3">€ {{ item.product.price }}</td>
+                                    <td class="col-3 pt-3">{{ item.quantity }}</td>
+                                    <td class="col-3 pt-3">€ {{ item.product.price }}</td>
+                                </tr>
+                            {% endfor %}
+                            <tr class="text-center">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="pt-4">
+                                    <h5><strong>Bag Total: € {{ total|floatformat:2 }}</strong></h5>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="text-end pt-4">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg px-3">
+                                        <span class="text-uppercase">Keep Shopping</span>
+                                    </a>
+                                </td>
+                                <td class="text-center pt-4">
+                                    <a href="" class="btn btn-black rounded-0 btn-lg px-3">
+                                        <span class="text-uppercase">Secure Checkout</span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
                     {% else %}
                         <p class="lead mb-5">You bag is empty.</p>
                         <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg">
