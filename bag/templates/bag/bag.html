@@ -27,7 +27,25 @@
                                         <img class="img-thumbnail border-dark rounded" src="{{ item.product.image.url }}">
                                     </td>
                                     <td class="col-2 pt-3">€ {{ item.product.price }}</td>
-                                    <td class="col-3 pt-3">{{ item.quantity }}</td>
+                                    <!-- <td class="col-3 pt-3">{{ item.quantity }}</td> -->
+                                    <td class="col-3 pt-3 ps-5">
+                                        <form class="form update-qty" action="" method="POST">
+                                            {% csrf_token %}
+                                                <div class="form-group col-10">
+                                                    <div class="input-group">
+                                                        <input class="form-control qty-input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                    </div>
+                                                </div>
+                                        </form>
+                                        <div class="row">
+                                            <div class="col-6 text-start">
+                                                <a class="update-qty"><small>Update</small></a>
+                                            </div>
+                                            <div class="col-6 text-end">
+                                                <a class="remove-item text-danger me-5"><small>Remove</small></a>
+                                            </div>
+                                        </div>
+                                    </td>
                                     <td class="col-3 pt-3">€ {{ item.product.price }}</td>
                                 </tr>
                             {% endfor %}
@@ -49,7 +67,7 @@
                                     </a>
                                 </td>
                                 <td class="text-center pt-4">
-                                    <a href="" class="btn btn-black rounded-0 btn-lg px-3">
+                                    <a href="" class="btn btn-outline-dark  rounded-0 btn-lg px-3">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -73,4 +91,15 @@
         {% include 'includes/icons.html' %}
         {% include 'includes/footer.html' %}
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-qty').click(function(e) {
+        var form = $(this).prev('.update-qty');
+        form.submit();
+    })
+</script>
+
 {% endblock %}
