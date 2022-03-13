@@ -19,7 +19,6 @@
                                     {% else %}
                                         <img src="/media/voucher50.png" class="card-img-top border border-dark" alt="voucher50">
                                     {% endif %}
-                                    <!-- <img src="{{ product.image }}" class="card-img-top" alt="{{ product.name }}"> -->
                                     <div class="card-body">
                                       <h5 class="card-title">{{ product.name }}</h5>
                                       <p class="card-text">{{ product.description }}</p>
@@ -36,9 +35,6 @@
                                                     <input class="form-control qty-input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                                 </div>
                                             </div>
-                                            <!-- <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 mt-5">
-                                                <span class="text-uppercase">Keep Shopping</span>
-                                            </a> -->
                                             <input type="submit" class="btn btn-outline-dark roundet-0 text-uppercase mt-4 col-12" value="Add to Bag">
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                         </div>

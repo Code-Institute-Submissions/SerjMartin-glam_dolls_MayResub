@@ -29,7 +29,7 @@
                                     <td class="col-2 pt-3">€ {{ item.product.price }}</td>
                                     <!-- <td class="col-3 pt-3">{{ item.quantity }}</td> -->
                                     <td class="col-3 pt-3 ps-5">
-                                        <form class="form update-qty" action="{% url 'adjust_bag' item.item_id %}" method="POST">
+                                        <form class="form update-qty update-form" action="{% url 'adjust_bag' item.item_id %}" method="POST">
                                             {% csrf_token %}
                                                 <div class="form-group col-10">
                                                     <div class="input-group">
@@ -39,10 +39,10 @@
                                         </form>
                                         <div class="row">
                                             <div class="col-6 text-start">
-                                                <a class="update-qty"><small>Update</small></a>
+                                                <a class="update-qty btn"><small>Update</small></a>
                                             </div>
                                             <div class="col-6 text-end">
-                                                <a class="remove-item text-danger me-5" id="remove_{{ item.item.id }}"><small>Remove</small></a>
+                                                <a class="remove-item text-danger me-5 btn" id="remove_{{ item.item.id }}"><small>Remove</small></a>
                                             </div>
                                         </div>
                                     </td>
@@ -95,9 +95,10 @@
 
 {% block postloadjs %}
 <script type="text/javascript">
+
     // Update quantity on click
     $('.update-qty').click(function(e) {
-        var form = $(this).prev('.update-qty');
+        var form = $(this).prev('.update-form');
         form.submit();
     })
 
@@ -113,5 +114,4 @@
          });
     })
 </script>
-
 {% endblock %}

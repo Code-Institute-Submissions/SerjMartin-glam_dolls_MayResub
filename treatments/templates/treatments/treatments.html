@@ -8,32 +8,63 @@
             <hr class="w-30">
         </div>
         <div class="row">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="row">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <div class="row">
-                                    {% for treatment in treatments %}
-                                        <div class="col-sm-12 col-md-6 p-5">
-                                            <div class="card border-0">
-                                                <img src="{{ product.image }}" class="card-img-top" alt="{{ product.name }}">
-                                                <div class="card-body">
-                                                  <h5 class="card-title">{{ treatment.category.name }}</h5>
-                                                  <h5 class="card-title">{{ treatment.name }}</h5>
-                                                  <p class="card-text">{{ treatment.description }}</p>
-                                                </div>
-                                                <div class="card-footer">
-                                                    €{{ treatment.price }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    {% endfor %}
+            <div class="col-sm-12 col-md-6">
+                <div class="col text-center">
+                <h2>Nail Care</h2>
+                </div>
+                {% for treatment in treatments %}
+                    {% if treatment.category.name == 'Nail Care' %}
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h5>{{ treatment.name }}</h5>
+                                </div>
+                                <div class="col text-end">
+                                    €{{ treatment.price }}
                                 </div>
                             </div>
+                            <p>{{ treatment.description }}</p>
                         </div>
-                    </div>
+                    {% endif %}
+                {% endfor %}
+                <div class="col text-center mt-5">
+                <h2>Eye Care</h2>
                 </div>
+                {% for treatment in treatments %}
+                    {% if treatment.category.name == 'Eye Care' %}
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h5>{{ treatment.name }}</h5>
+                                </div>
+                                <div class="col text-end">
+                                    €{{ treatment.price }}
+                                </div>
+                            </div>
+                            <p>{{ treatment.description }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="col text-center">
+                <h2>Facisls</h2>
+                </div>
+                {% for treatment in treatments %}
+                    {% if treatment.category.name == 'Facials' %}
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h5>{{ treatment.name }}</h5>
+                                </div>
+                                <div class="col text-end">
+                                    €{{ treatment.price }}
+                                </div>
+                            </div>
+                            <p>{{ treatment.description }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
         {% include 'includes/icons.html' %}
