@@ -45,3 +45,10 @@ body {
 .ficons {
     font-size: 200%;
 }
+
+/* bag.html */
+
+.update-qty,
+.remove-item {
+    cursor: pointer;
+}
