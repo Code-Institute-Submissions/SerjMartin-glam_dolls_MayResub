@@ -1,0 +1,17 @@
+<div class="countener-fluid">
+    {% for treatment in treatments %}
+        {% if treatment.category.name == 'Eye Care' %}
+            <div class="col">
+                <div class="row">
+                    <div class="col-8">
+                        h5>{{ treatment.name }}</h5>
+                    </div>
+                    <div class="col text-end">
+                        €{{ treatment.price }}
+                    </div>
+                </div>
+                p>{{ treatment.description }}</p>
+            </div>
+        % endif %}
+    % endfor %}
+</div>

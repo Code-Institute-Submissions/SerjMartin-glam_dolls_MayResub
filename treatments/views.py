@@ -11,3 +11,14 @@ def all_treatments(request):
     }
 
     return render(request, 'treatments/treatments.html', context)
+
+def eye_care(request):
+    """A view to return the eye_care view"""
+
+    treatments = Treatment.objects.all()
+
+    context = {
+        'treatments': treatments,
+    }
+
+    return render(request, 'treatments/eye_care.html')
