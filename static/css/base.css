@@ -52,3 +52,10 @@ body {
 .remove-item {
     cursor: pointer;
 }
+
+.toast {
+    position: fixed;
+    top: 60px;
+    right: 15px;
+    z-index: 99999999999;
+}

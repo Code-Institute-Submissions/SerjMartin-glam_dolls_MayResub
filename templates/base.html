@@ -117,7 +117,11 @@
 
     <!--message container-->
     {% if messages %}
-        <div class="message-container"></div>
+        <div class="message-container">
+          {% for message in messages %}
+            {% include 'includes/toasts/toast_success.html' %}
+          {% endfor %}
+        </div>
     {% endif %}
 
     <!--page header block-->
@@ -130,6 +134,9 @@
 
     <!--js block-->
     {% block postloadjs %}
+    <script type="text/javascript">
+      $('.toast').toast('show');
+    </script>
     {% endblock %}
 
   </body>
