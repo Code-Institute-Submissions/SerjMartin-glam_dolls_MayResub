@@ -10,11 +10,11 @@
                 {% for treatment in treatments %}
                     {% if treatment.category.name == 'Eye Care' %}
                         <div class="col">
-                            <div class="row">
-                                <div class="col-8">
+                            <div class="row justify-content-center">
+                                <div class="col-4">
                                     <h5>{{ treatment.name }}</h5>
                                 </div>
-                                <div class="col text-end">
+                                <div class="col-4 text-end">
                                     €{{ treatment.price }}
                                 </div>
                             </div>
