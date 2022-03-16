@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block content %}
     <div class="container-fluid">
@@ -27,26 +28,28 @@
                                         <img class="img-thumbnail border-dark rounded" src="{{ item.product.image.url }}">
                                     </td>
                                     <td class="col-2 pt-3">€ {{ item.product.price }}</td>
-                                    <!-- <td class="col-3 pt-3">{{ item.quantity }}</td> -->
                                     <td class="col-3 pt-3 ps-5">
-                                        <form class="form update-qty update-form" action="{% url 'adjust_bag' item.item_id %}" method="POST">
+                                        <form class="form update-form" action="{% url 'adjust_bag' item.item_id %}" method="POST">
                                             {% csrf_token %}
-                                                <div class="form-group col-10">
-                                                    <div class="input-group">
-                                                        <input class="form-control qty-input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                                                    </div>
+                                            <div class="form-group col-10">
+                                                <div class="input-group">
+                                                    <input class="form-control qty-input" type="number" name="quantity" value="{{ item.quantity }}" min="0" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                                                 </div>
+                                                <div class="d-grid gap-2 col mx-auto">
+                                                    <button class="btn btn-outline-danger text-dark border-0" type="submit">Update Bag >></button>
+                                                </div>
+                                            </div>
                                         </form>
                                         <div class="row">
-                                            <div class="col-6 text-start">
-                                                <a class="update-qty btn"><small>Update</small></a>
-                                            </div>
-                                            <div class="col-6 text-end">
-                                                <a class="remove-item text-danger me-5 btn" id="remove_{{ item.item.id }}"><small>Remove</small></a>
-                                            </div>
+                                            <!-- <div class="col-6 text-start">
+                                                <a class="update-qty"><small>Update</small></a>
+                                            </div> -->
+                                            <!-- <div class="col-6 text-end">
+                                                <a class="remove-item text-danger me-5 btn" id="remove_{{ item.item.id }}" data-item_id="{{ item.item_id }}"><small>Remove</small></a>
+                                            </div> -->
                                         </div>
                                     </td>
-                                    <td class="col-3 pt-3">€ {{ item.product.price }}</td>
+                                    <td class="col-3 pt-3">€ {{ item.product.price | calc_subtotal:item.quantity }}</td>
                                 </tr>
                             {% endfor %}
                             <tr class="text-center">
@@ -110,7 +113,7 @@
 
         $.post(url, data)
          .done(function() {
-             location.reload();
+            location.reload();
          });
     })
 </script>
