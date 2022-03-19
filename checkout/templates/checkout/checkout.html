@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bag_tools %}
+
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-4">
+                <h2 class="logo-font">Shoping Bag</h2>
+                <hr class="w-30">
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <p class="text-muted ms-5">Please fill out the form below to complite your order</p>
+                    <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                        {% csrf_token %}
+                        <fieldset class="rounded px-3 mb-5">
+                            <legend class="fieldset-label small text-black px-2 w-auto ms-5">Details</legend>
+                            <div class="col ms-5 mb-3">{{ order_form.full_name | as_crispy_field }}</div>
+                            <div class="col ms-5 mb-3">{{ order_form.email | as_crispy_field }}</div>
+                        </fieldset>
+                        <fieldset class="rounded px-3 mb-5">
+                            <legend class="fieldset-label small text-black px-2 w-auto ms-5">Delivery</legend>
+                            <div class="col ms-5 mb-3">{{ order_form.phone_number | as_crispy_field }}</div>
+                            <div class="col ms-5 mb-3">{{ order_form.street_address1 | as_crispy_field }}</div>
+                            <div class="col ms-5 mb-3">{{ order_form.street_address2 | as_crispy_field }}</div>
+                            <div class="col ms-5 mb-3">{{ order_form.town_or_city | as_crispy_field }}</div>
+                            <div class="col ms-5 mb-3">{{ order_form.postcode | as_crispy_field }}</div>
+                            <div class="col ms-5 mb-3">{{ order_form.county | as_crispy_field }}</div>
+                            <div class="col ms-5 mb-3">{{ order_form.country | as_crispy_field }}</div>
+                            <div class="form-check form-check-inline float-right mr-0">
+                                <label class="form-check-label ms-1" for="id-save-info">Save this delivery information to my profile</label>
+                                <input class="form-check-input ms-4" type="checkbox" id="id-save-info" name="save-info" checked>
+                            </div>
+                        </fieldset>
+                        <fieldset class="px-3 ms-5">
+                            <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                            <!-- A Stripe card element will go here -->
+                            <div class="mb-3" id="card-element"></div>
+
+                            <!-- Used to display form errors -->
+                            <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                            <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                        </fieldset>
+
+                        <div class="submit-button text-right mt-5 mb-2">
+                            <a href="{% url 'view_bag' %}" class="btn btn-outline-dark rounded-0 btn-lg ms-5">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-bould">Adjust Bag</span>
+                            </a>
+                            <button id="submit-button" class="btn btn-outline-dark rounded-0 btn-lg ms-5">
+                                <span class="font-weight-bold">Complete Order</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </button>
+                            <p class="small text-danger ms-5">
+                                <span class="icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </span>
+                                <span>Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% include 'includes/icons.html' %}
+        {% include 'includes/footer.html' %}
+    </div>
+{% endblock %}
