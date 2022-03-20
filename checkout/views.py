@@ -53,6 +53,7 @@ def checkout(request):
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
+        bag = request.session.get('bag', {})
         if not bag:
             messages.error(request, "There's nothing in your bag")
             return redirect(reverse('products'))
