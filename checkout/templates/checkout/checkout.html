@@ -48,25 +48,29 @@
                             <input type="hidden" value="{{ client_secret }}" name="client_secret">
                         </fieldset>
 
-                        <div class="submit-button text-right mt-5 mb-2">
-                            <a href="{% url 'view_bag' %}" class="btn btn-outline-dark rounded-0 btn-lg ms-5">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-bould">Adjust Bag</span>
-                            </a>
-                            <button id="submit-button" class="btn btn-outline-dark rounded-0 btn-lg ms-5">
-                                <span class="font-weight-bold">Complete Order</span>
-                                <span class="icon">
-                                    <i class="fas fa-lock"></i>
-                                </span>
-                            </button>
-                            <p class="small text-danger ms-5">
-                                <span class="icon">
-                                    <i class="fas fa-exclamation-circle"></i>
-                                </span>
-                                <span>Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
-                            </p>
+                        <div class="col submit-button text-right mt-5 mb-2">
+                            <div class="row">
+                                <a href="{% url 'view_bag' %}" class="col btn btn-outline-dark rounded-0 btn-lg ms-5">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-bould">Adjust Bag</span>
+                                </a>
+                                <button id="submit-button" class=" col btn btn-outline-dark rounded-0 btn-lg ms-5">
+                                    <span class="font-weight-bold">Complete Order</span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="col text-end">
+                                <p class="small text-danger ms-5">
+                                    <span class="icon">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </span>
+                                    <span>Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
+                                </p>
+                            </div>
                         </div>
                     </form>
                 </div>
