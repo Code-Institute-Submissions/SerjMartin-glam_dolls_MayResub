@@ -8,7 +8,7 @@ from .models import Order, OrderLineItem
 from products.models import Product
 from bag.contexts import bag_contents
 
-# import stripe
+import stripe
 
 
 def checkout(request):
