@@ -1,0 +1,1 @@
+GlamDolks Confirmation order number {{ order.order_number }}
