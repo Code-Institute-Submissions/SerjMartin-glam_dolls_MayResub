@@ -13,42 +13,15 @@
                         <li><a href="{% url 'eye_care' %}" class="dropdown-item">Eye Care</a></li>
                         <li><a href="{% url 'facial' %}" class="dropdown-item">Facials</a></li>
                     </ul>
-                    <ul class="dropdown-item text-muted list-unstyled">Gift Cards
+                    <ul class="dropdown-item text-muted list-unstyled">Profile
                         {% if request.user.is_authenticated %}
+                            <li><a href="{% url 'products' %}" class="dropdown-item">Gift Card</a></li>
                             <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                         {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                         {% endif %}
                     </ul>
-                    <!-- <li class="dropdown-item">
-                        <div class="dropdown">
-                            <button class="btn btn-white dropdown-toggle dropdown" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                            Treatments
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li><a href="" class="dropdown-item">Nail Care</a></li>
-                                <li><a href="" class="dropdown-item">Eye Care</a></li>
-                                <li><a href="" class="dropdown-item">Facials</a></li>
-                            </ul>
-                        </div>
-                    </li> -->
-                    <!-- <li class="dropdown-item">
-                        <div class="dropdown">
-                            <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
-                            Gift Cards
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                            {% if request.user.is_authenticated %}
-                                <li><a href="" class="dropdown-item">My Profile</a></li>
-                                <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
-                            {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
-                            </ul>
-                        </div>
-                    </li> -->
                 </ul>
             </div>
         </li>

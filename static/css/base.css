@@ -11,8 +11,16 @@ body {
     padding: 0;
 }
 
-.img-fluid{
+.home-image{
     background: url('/media/background1.jpeg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    margin-top:0;
+}
+
+.eye-care-image {
+    background: url('/media/eye-care.jpeg') no-repeat center center;
     background-size: cover;
     width: 100%;
     height: 500px;
