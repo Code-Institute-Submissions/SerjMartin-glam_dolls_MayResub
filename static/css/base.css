@@ -71,6 +71,10 @@ body {
 }
 
 footer {
+    background-color: #fde2e6;
+}
+
+.footer-form {
     background-color: #fcccd4;
 }
 
