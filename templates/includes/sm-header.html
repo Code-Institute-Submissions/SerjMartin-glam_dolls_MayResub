@@ -1,5 +1,5 @@
 <div class="d-lg-none d-block">
-    <ul class="list-inline list-unstyled text-center mt-4">
+    <ul class="list-inline list-unstyled text-end mt-4">
         <li class="list-inline-item">
             <div class="container-fluid dropdown">
                 <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,7 +33,7 @@
                   <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                   <p class="my-0">
                       {% if grand_total %}
-                          ${{ grand_total|floatformat:2 }}
+                          ${{ total|floatformat:2 }}
                       {% else %}
                           $0.00
                       {% endif %}
