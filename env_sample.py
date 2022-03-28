@@ -1,0 +1,5 @@
+os.environ.setdefault("SECRET_KEY", "Test")
+os.environ.setdefault("DEBUG", "True")
+os.environ.setdefault("DATABASE_URL", "")
+os.environ.setdefault("STRIPE_PUBLIC_KEY", "")
+os.environ.setdefault("STRIPE_SECRET_KEY", "")
