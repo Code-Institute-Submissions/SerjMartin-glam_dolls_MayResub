@@ -11,15 +11,31 @@ You also have the ability to subscribe for the newest news on offers or discount
 ![Responsice Mockup](media/mockup.png)
 
 ## Table of Contents
-  - [Features](#features)
   - [Business Goals](#business-goals)
   - [User goals](#User-goals)
+  - [Features](#features)
   - [Technologies Used](#technologies-used)
   - [Framewoks](#frameworks)
   - [Testing](#testing)
   - [Deployment](#deployment)
   - [Acknowledgement](#acknowledgement)
 
+
+## Business Goals
+  - To target the customers who are looking for a beauty salon.
+  - To target the customers who are looking for nails treatments.
+  - To target the customers who are looking for facial treatments.
+  - To target the customers who are looking for eye treatments.
+  - To sell online how many gift cards is possible.
+
+## User goals
+
+As a customer,  I would like
+  - To know what treatments this beauty salon offer.
+  - To be able to select a specific category of treatments.
+  - To be able to see the description and price of treatment.
+  - To be able to buy a gift card online for someone special.
+  - To be able to see the total in my shopping bag before checkout.
 
 
 ## Features
@@ -92,7 +108,7 @@ You also have the ability to subscribe for the newest news on offers or discount
 
   - ### Prepare our environment and [settings.py](https://github.com/SerjMartin/glam_dolls/blob/main/glamdolls/settings.py) files
     In the project's [settings.py](https://github.com/SerjMartin/glam_dolls/blob/main/glamdolls/settings.py) add the app name in "INSTALET_APP".
-    Create the [env.py](https://github.com/SerjMartin/Funakoshi-Club/blob/main/env_sample.py) file to store the URL from DATABASE, SECRET_KEYS then add them in the Heroku "Config Vars".
+    Create the [env.py](https://github.com/SerjMartin/glam_dolls/blob/main/env_sample.py) file to store the URL from DATABASE, SECRET_KEYS then add them in the Heroku "Config Vars".
 
   - ### Get our static and media files stored on Whitenoise
     - In the project's [settings.py](https://github.com/SerjMartin/glam_dolls/blob/main/glamdolls/settings.py) by adding followings line in MIDDLEWARE ["whitenoise.middleware.WhiteNoiseMiddleware"]
