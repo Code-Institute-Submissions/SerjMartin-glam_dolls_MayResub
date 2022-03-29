@@ -75,24 +75,39 @@ As a customer,  I would like
 
 ## Technologies Used
 
- ### Libraries
+### Libraries
 
-  - For the account registration used [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) library
-  - For the feature images and CSS support used the [Whitenoise](https://whitenoise.evans.io/en/stable/django.html)
-  - For the comments used [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) library
-  - For the login/logout templates used default account templates from [Allauth](https://django-allauth.readthedocs.io/en/latest/) library
-  - For Awesome icons used [Font Awesome](https://fontawesome.com/)
+- For the account registration used [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) library
+- For the feature images and CSS support used the [Whitenoise](https://whitenoise.evans.io/en/stable/django.html)
+- For the comments used [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) library
+- For the login/logout templates used default account templates from [Allauth](https://django-allauth.readthedocs.io/en/latest/) library
+- For Awesome icons used [Font Awesome](https://fontawesome.com/)
 
- ### Programming languages
+### Programming languages
 
-  - HTML
-  - CSS
-  - Java Script
-  - Python
+- HTML
+- CSS
+- Java Script
+- Python
 
- ### Framewoks
-   - [Django](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid development and clean design.
-   - [Boostrap](https://getbootstrap.com/) - Bootstrap is a web framework that focused on simplifying the development of an informative web page.
+### Framewoks
+  - [Django](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid development and clean design.
+  - [Boostrap](https://getbootstrap.com/) - Bootstrap is a web framework that focused on simplifying the development of an informative web page.
+
+### Database
+ - Treatments app
+
+
+| Name | Key | Type | Extra Info |
+| :--------------: | :----------------: | :--------------: | :----------------: |
+| Category | category | ForeignKey | null=True, blank=True, on_delete=models.SET_NULL |
+| Name | name | CharField | max_length=254 |
+| Description | description | TextField | null=True, blank=True |
+| Price | price | DecimalField | max_digits=6, decimal_places=2 |
+| Deals | deals | CharField | max_length=254, null=True, blank=True |
+
+
+
 
 ## Testing
 
