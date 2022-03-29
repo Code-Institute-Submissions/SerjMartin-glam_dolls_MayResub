@@ -95,6 +95,8 @@ As a customer,  I would like
   - [Boostrap](https://getbootstrap.com/) - Bootstrap is a web framework that focused on simplifying the development of an informative web page.
 
 ### Database
+Used SQL database by default.
+
  - Treatments app
 
 
@@ -106,6 +108,58 @@ As a customer,  I would like
 | Price | price | DecimalField | max_digits=6, decimal_places=2 |
 | Deals | deals | CharField | max_length=254, null=True, blank=True |
 
+
+ - Product app
+
+| Name | Key | Type | Extra Info |
+| :--------------: | :----------------: | :--------------: | :----------------: |
+| Name | name | CharField | max_length=254 |
+| Description | description | TextField |  |
+| Price | price | DecimalField | max_digits=6, decimal_places=2 |
+| Image url | image_url | URLField | max_length=1024, null=True, blank=True |
+| Image | image | ImageField | null=True, blank=True |
+
+
+ - Checkout app (Order)
+
+| Name | Key | Type | Extra Info |
+| :--------------: | :----------------: | :--------------: | :----------------: |
+| Order Number | order_number | CharField | max_length=32, null=False, editable=False)
+| User Profile | user_profile | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'|
+| Full Name | full_name | CharField | max_length=50, null=False, blank=False |
+| Email | email | EmailField | max_length=254, null=False, blank=False |
+| Phone Number | phone_number | CharField | max_length=20, null=False, blank=False |
+| Country | country | CharField | max_length=40, null=False, blank=False |
+| Postcode | postcode | CharField | max_length=20, null=True, blank=True |
+| Town Or City | town_or_city | CharField | max_length=40, null=False, blank=False |
+| Street Address1 | street_address1 | CharField | max_length=80, null=False, blank=False |
+| Street Address2 | street_address2 | CharField | max_length=80, null=True, blank=True |
+| County | county | CharField | max_length=80, null=True, blank=True |
+| Date | date | DateTimeField | auto_now_add=True |
+| Order Total | order_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0 |
+
+
+ - Checkout app (OrderLineItem)
+
+| Name | Key | Type | Extra Info |
+| :--------------: | :----------------: | :--------------: | :----------------: |
+| Order | order | ForeignKey | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' |
+| Product | product | ForeignKey | null=False, blank=False, on_delete=models.CASCADE |
+| Quantity | quantity | IntegerField | null=False, blank=False, default=0 |
+| Lineitem Total | lineitem_total | DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False |
+
+
+ - Profile app
+
+| Name | Key | Type | Extra Info |
+| :--------------: | :----------------: | :--------------: | :----------------: |
+| User | user | OneToOneField | on_delete=models.CASCADE |
+| Default Phonenumber | default_phone_number | CharField | max_length=20, null=True, blank=True |
+| Default Street Address1 | default_street_address1 | CharField | max_length=80, null=True, blank=True |
+| Default Street Address2 | default_street_address2 | CharField | max_length=80, null=True, blank=True) |
+| Default Town Or City | default_town_or_city | CharField | max_length=40, null=True, blank=True |
+| Default County | default_county | CharField | max_length=80, null=True, blank=True |
+| Default Ppostcode | default_postcode | CharField | max_length=40, null=True, blank=True |
 
 
 
