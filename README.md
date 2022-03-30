@@ -166,7 +166,7 @@ Used SQL database by default.
 ## Testing
 
  ### Validator Testing
-  - HTML code is validated throught [W3 validatdor](https://validator.w3.org/)
+  - HTML code is validated throught [W3 validatdor](https://validator.w3.org/).
      Result came out as follows.
 
   ![html-validator](media/html-validator.png)
