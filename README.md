@@ -166,6 +166,24 @@ Used SQL database by default.
 ## Testing
 
  ### Validator Testing
+  - HTML code is validated throught [W3 validatdor](https://validator.w3.org/)
+     Result came out as follows.
+
+  ![html-validator](media/html-validator.png)
+
+  - CSS code is validated throught [W3 Jigsaw](https://jigsaw.w3.org/css-validator/)
+
+  ![css-validator](media/css-validator.png)
+
+  - JavaScript code is validated throught [JS Hint](https://jshint.com/)
+
+  ![js-validator](media/jsHint-validator.png)
+
+  - Python code is validated throught [PEP8](http://pep8online.com/)
+
+  ![python-validator](media/pep8-validator.png)
+
+
 
 ## Deployment
 
