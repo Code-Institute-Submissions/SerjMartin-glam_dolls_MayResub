@@ -61,47 +61,56 @@ As a customer,  I would like
     - As **Shopper** I want to be able to **view an order confirmation after checkout** so that I can **verify that I haven't made any mistake**
 
 
-
-
 ## Features
 
 ### Existing Features
-  - ### Nav Bar
+- ### Nav Bar
+  - This section will allow us to navigate easily to all pages including links to the Home, Treatments, Gifts Card and Shopping Bag pages.
+  - The logo serves as a home page link so the user can find the way back if needed.
+  - The Treatments button serves as a dropdown button that gives us access to All Treatments, Nail Care, Eye Care and Facial pages.
+  - The Gift Card button serves as a Gift Card page link where users can choose the gift card type that they want to purchase.
+  - BAG: Everytime a product is added to the cart, the bag gets updated with the item, price and quantity.
 
-  ![NavBar](media/nav-bar.png)
-
-  - ### Category Icons
-
-  ![Icons](media/category-icons.png)
-
-
-
-  - ### Footer
-
-  ![Footer](media/footer.png)
+ ![NavBar](media/nav-bar.png)
 
 
+- ### Category Icons
+  - The Icons serve as links to the specific categories of treatments.
 
-  - ### All Treatments
+ ![Icons](media/category-icons.png)
+
+
+- ### Footer
+  - This section includes social media links and subscription options.
+  - By clicking on the Facebook icon it brings you to the GlamDoll Facebook page.
+  - The subscriptions section allows you to subscribe to news to stay updated.
+
+ ![Footer](media/footer.png)
+
+
+- ### All Treatments
+  - The all Treatments page shows the user all the treatments offered by GlamDolls beauty salon.
 
  ![AllTreatmets](media/all-treatments.png)
 
 
-
-  - ### Gift Card
+- ### Gift Card
+  - The gift card page allows you to choose the type and quantity of gift cards that the user wants to purchase.
 
  ![GiftCard](media/product.png)
 
 
-  - ### Shopping Bag
+- ### Shopping Bag
+  - This page allows you to purchase anything that the user has added to their bag.
 
  ![ShoppingBag](media/shopping-bag.png)
 
-  - ### FaceBook page
+
+- ### FaceBook page
 
   [Live FaceBook page!](https://www.facebook.com/GlamDolls-105004535497850)
 
-  ![FaceBook](media/facebook.png)
+ ![FaceBook](media/facebook.png)
 
 
 ## Technologies Used
