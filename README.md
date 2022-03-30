@@ -37,33 +37,65 @@ As a customer,  I would like
   - To be able to buy a gift card online for someone special.
   - To be able to see the total in my shopping bag before checkout.
 
+## User Stores
+
+ - ### Registration and User Account
+    - As **Site User** I want to be able to **easily register for an account** so that I can **have a personal account and be able to view my profile**
+    - As **Site User** I want to be able to **easily login or logout** so that I can **access my personal account information**
+    - As **Site User** I want to be able to **easily recover my password in case I forget it** so that I can **recovery access to my account**
+    - As **Site User** I want to be able to **receive an email confirmation after registering** so that I can **verify that my account registration was successful**
+    - As **Site User** I want to be able to **have a personalized user profile** so that I can **view my personal order history and order confirmation, and see my payment information**
+
+ - ## Viewing and Navigation
+    - As **User** I want to be able to **view the type of vouchers** so that I can **select one to purchase**
+    - As **User** I want to be able to **view individual procedure details** so that I can **identify the price, description and time**
+    - As **User** I want to be able to **view a specific category of procedure** so that I can **quickly find in what I am interested in**
+    - As **User** I want to be able to **subscribe** so that  I can **receive the offers by email**
+
+  - ## Purchasing and Checkout
+    - As **Shopper** I want to be able to **easily select the type of the voucher** so that I can **ensure I don't accidentally select the wrong one**
+    - As **Shopper** I want to be able to **view items in my bat to be purchased** so that I can **identify the total cost of my purchase**
+    - As **Shopper** I want to be able to **adjust the quantity of individual items in my bag** so that I can **easily make changes to my purchase before checkout**
+    - As **Shopper** I want to be able to **easily enter my payment information** so that I can **check out quickly and no hassles**
+    - As **Shopper** I want to be able to **feel my personal and payment information is safe and secure** so that I can **confidently provide needed information to make a purchase**
+    - As **Shopper** I want to be able to **view an order confirmation after checkout** so that I can **verify that I haven't made any mistake**
+
+
+
 
 ## Features
 
 ### Existing Features
- ### Home
+  - ### Nav Bar
 
-  - ### About
-  ![About]()
+  ![NavBar](media/nav-bar.png)
 
+  - ### Category Icons
 
-
-  - ### History
-  ![History]()
+  ![Icons](media/category-icons.png)
 
 
 
- ### Book library
- ![Library]()
+  - ### Footer
+
+  ![Footer](media/footer.png)
 
 
 
- ### Blog
- ![Blog]()
+  - ### All Treatments
+
+ ![AllTreatmets](media/all-treatments.png)
 
 
- ### Post Detailes
- ![Comments]()
+
+  - ### Gift Card
+
+ ![GiftCard](media/product.png)
+
+
+  - ### Shopping Bag
+
+ ![ShoppingBag](media/shopping-bag.png)
 
 
 
@@ -85,17 +117,17 @@ As a customer,  I would like
 
 ### Programming languages
 
-- HTML
-- CSS
-- Java Script
-- Python
+- [HTML](https://www.w3schools.com/html/default.asp)
+- [CSS](https://www.w3schools.com/css/default.asp)
+- [Java Script](https://www.w3schools.com/js/default.asp)
+- [Python](https://www.w3schools.com/python/default.asp)
 
 ### Framewoks
   - [Django](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid development and clean design.
   - [Boostrap](https://getbootstrap.com/) - Bootstrap is a web framework that focused on simplifying the development of an informative web page.
 
 ### Database
-Used SQL database by default.
+Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
 
  - Treatments app
 
