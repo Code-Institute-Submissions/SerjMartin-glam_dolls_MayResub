@@ -97,15 +97,20 @@ As a customer,  I would like
 
  ![ShoppingBag](media/shopping-bag.png)
 
+  - ### FaceBook page
 
+  [Live FaceBook page!](https://www.facebook.com/GlamDolls-105004535497850)
 
-
-
-
-
+  ![FaceBook](media/facebook.png)
 
 
 ## Technologies Used
+
+__Balsmiq Wireframe__
+
+ The Wireframe of this website was built in [Balsamic](https://balsamiq.cloud/)
+
+  ![Wireframe](media/wireframe.png)
 
 ### Libraries
 
@@ -242,4 +247,17 @@ Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
 
 ### Cloning
 
+If you wish to clone this repository you can follow the following steps below.
+   - Go to the Git Hub website and log in.
+   - Locate the [Repository](ithub.com/SerjMartin/glam_dolls) used for this project.
+   - Under the Repository's name locate the "Code" button.
+   - Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL    from the HTTPS dialogue box.
+   - Open your developement editor of choice and open a terminal window in a directory of your choice.
+   - Use the git clone command in terminal followed by the copied git URL.
+   - A clone of the project will be created locally on your machine.
+Once the project has been loaded into an IDE of choice, run the following command in the shell to install all the required packages: pip install -r requirements.txt.
+
 ## Acknowledgement
+
+  - Thank you to everyone who took their time to provide me with constructive feedback on the Slack community app.
+  - Big thanks to my mentor 'Tim Nelson' for his time to answer all my questions and his professional advice.
