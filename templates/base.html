@@ -39,7 +39,7 @@
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
   <script src="https://kit.fontawesome.com/ef15e4e2a8.js" crossorigin="anonymous"></script>
   <!-- Stripe -->
   <script src="https://js.stripe.com/v3/"></script>
@@ -70,28 +70,28 @@
                 Treatments
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                <li><a href="{% url 'treatments' %}" class="dropdown-item">All Treatments</a></li>
-                <li><a href="{% url 'nail_care' %}" class="dropdown-item">Nail Care</a></li>
-                <li><a href="{% url 'eye_care' %}" class="dropdown-item">Eye Care</a></li>
-                <li><a href="{% url 'facial' %}" class="dropdown-item">Facials</a></li>
+                <a href="{% url 'treatments' %}" class="dropdown-item">All Treatments</a>
+                <a href="{% url 'nail_care' %}" class="dropdown-item">Nail Care</a>
+                <a href="{% url 'eye_care' %}" class="dropdown-item">Eye Care</a>
+                <a href="{% url 'facial' %}" class="dropdown-item">Facials</a>
               </ul>
             </div>
           </li>
           {% if request.user.is_authenticated %}
-          <li class="list-inline-item">
-            <a href="{% url 'account_logout' %}">
-              <button class="btn btn-white" type="button">
-                Logout
-              </button>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="{% url 'products' %}">
-              <button class="btn btn-white" type="button">
-                Gift Card
-              </button>
-            </a>
-          </li>
+
+          <a href="{% url 'account_logout' %}" class="list-inline-item">
+            <button class="btn btn-white" type="button">
+              Logout
+            </button>
+          </a>
+
+
+          <a href="{% url 'products' %}" class="list-inline-item">
+            <button class="btn btn-white" type="button">
+              Gift Card
+            </button>
+          </a>
+
           {% else %}
           <li class="list-inline-item">
             <div class="dropdown">
@@ -106,7 +106,7 @@
           </li>
           {% endif %}
           {% if request.user.is_authenticated %}
-          <li class="list-inline-item">
+          <div class="list-inline-item">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
               href="{% url 'view_bag' %}">
               <div class="text-center">
@@ -120,7 +120,7 @@
                 </p>
               </div>
             </a>
-          </li>
+          </div>
           {% endif %}
         </ul>
       </div>
@@ -157,7 +157,7 @@
       toast.show()
     })
   </script>
-  <script type='text/javascript'>
+  <script>
     (function ($) {
       window.fnames = new Array();
       window.ftypes = new Array();
