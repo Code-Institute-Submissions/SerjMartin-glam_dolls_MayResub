@@ -2,168 +2,182 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
-    {% block meta %}
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="keywords" content="nails, nail care, eye care, waxing, facial, skincare, nail bar, feet care">
-      <meta name="description" content="The Beauty Salon is offering a wide range of treatments using only the highest quality products.">
-    {% endblock %}
 
-    {% block extra_meta %}
-    {% endblock %}
+<head>
+  {% block meta %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="nails, nail care, eye care, waxing, facial, skincare, nail bar, feet care">
+  <meta name="description"
+    content="The Beauty Salon is offering a wide range of treatments using only the highest quality products.">
+  {% endblock %}
 
-    {% block corecss %}
-    <!-- CSS only -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css" integrity="sha512-c9N/Xq0n4rQdyCXF4RgrRYAAOSnNJDp8NWILsSUx+33zWyaMbXXvqajgO0UXybRdTGVpxq3FBrcGwabkWsT8OA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lato&family=Teko:wght@300&display=swap" rel="stylesheet">
-      <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
-      <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+  {% block corecss %}
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css"
+    integrity="sha512-c9N/Xq0n4rQdyCXF4RgrRYAAOSnNJDp8NWILsSUx+33zWyaMbXXvqajgO0UXybRdTGVpxq3FBrcGwabkWsT8OA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lato&family=Teko:wght@300&display=swap"
+    rel="stylesheet">
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% endblock %}
 
-    {% block corejs %}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.js" integrity="sha512-GQk/YTeRwD0dTnM//plfcWnGTGqGt0FB33mRTcbcuVneAi5ZrdOA28EpJltqF9lwr/0jRUEcE6yYV7duc1MEVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-      <script src="https://kit.fontawesome.com/ef15e4e2a8.js" crossorigin="anonymous"></script>
-      <!-- Stripe -->
-      <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
+  {% block extra_css %}
+  {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
+  {% block corejs %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.js"
+    integrity="sha512-GQk/YTeRwD0dTnM//plfcWnGTGqGt0FB33mRTcbcuVneAi5ZrdOA28EpJltqF9lwr/0jRUEcE6yYV7duc1MEVw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script src="https://kit.fontawesome.com/ef15e4e2a8.js" crossorigin="anonymous"></script>
+  <!-- Stripe -->
+  <script src="https://js.stripe.com/v3/"></script>
+  {% endblock %}
 
-    <title>Glam Dolls {% block extra_tile %}{% endblock %}</title>
-  </head>
-  <body>
-    <!--header container-->
-    <header class="container-fluid">
-      <div class="row">
-        <div class="col-md-6 col-sm-12 text-center">
-          <a href="{% url 'home' %}" class="nav-link">
-            <h2 class="logo mt-3">Glam Dolls</h2>
-          </a>
-        </div>
-        <div class="col-6 d-lg-block d-none">
-          <ul class="list-inline list-unstyled text-center mt-4">
-            <li class="list-inline-item"><a href="{% url 'home' %}" class="nav-link text-black">Home</a></li>
-            <li class="list-inline-item dropdown">
-              <div class="dropdown">
-                <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                  Treatments
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                  <li><a href="{% url 'treatments' %}" class="dropdown-item">All Treatments</a></li>
-                  <li><a href="{% url 'nail_care' %}" class="dropdown-item">Nail Care</a></li>
-                  <li><a href="{% url 'eye_care' %}" class="dropdown-item">Eye Care</a></li>
-                  <li><a href="{% url 'facial' %}" class="dropdown-item">Facials</a></li>
-                </ul>
-              </div>
-            </li>
-            {% if request.user.is_authenticated %}
-              <li class="list-inline-item">
-                <a href="{% url 'account_logout' %}">
-                    <button class="btn btn-white" type="button">
-                      Logout
-                    </button>
-                  </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="{% url 'products' %}">
-                  <button class="btn btn-white" type="button">
-                    Gift Card
-                  </button>
-                </a>
-              </li>
-            {% else %}
-              <li class="list-inline-item">
-                <div class="dropdown">
-                  <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                    Gift Cards
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                  </ul>
-              </li>
-            {% endif %}
-            {% if request.user.is_authenticated %}
-            <li class="list-inline-item">
-              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                  <div class="text-center">
-                      <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                      <p class="my-0">
-                          {% if total %}
-                              ${{ total|floatformat:2 }}
-                          {% else %}
-                              $0.00
-                          {% endif %}
-                      </p>
-                  </div>
-              </a>
-            </li>
-            {% endif %}
-          </ul>
-        </div>
-        <div class="col-md-6 col-sm-12 text-end">
-          {% include 'includes/sm-header.html' %}
-        </div>
+  {% block extra_js %}
+  {% endblock %}
+
+  <title>Glam Dolls {% block extra_tile %}{% endblock %}</title>
+</head>
+
+<body>
+  <!--header container-->
+  <header class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-sm-12 text-center">
+        <a href="{% url 'home' %}" class="nav-link">
+          <h2 class="logo mt-3">Glam Dolls</h2>
+        </a>
       </div>
-    </header>
+      <div class="col-6 d-lg-block d-none">
+        <ul class="list-inline list-unstyled text-center mt-4">
+          <li class="list-inline-item"><a href="{% url 'home' %}" class="nav-link text-black">Home</a></li>
+          <li class="list-inline-item dropdown">
+            <div class="dropdown">
+              <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Treatments
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                <li><a href="{% url 'treatments' %}" class="dropdown-item">All Treatments</a></li>
+                <li><a href="{% url 'nail_care' %}" class="dropdown-item">Nail Care</a></li>
+                <li><a href="{% url 'eye_care' %}" class="dropdown-item">Eye Care</a></li>
+                <li><a href="{% url 'facial' %}" class="dropdown-item">Facials</a></li>
+              </ul>
+            </div>
+          </li>
+          {% if request.user.is_authenticated %}
+          <li class="list-inline-item">
+            <a href="{% url 'account_logout' %}">
+              <button class="btn btn-white" type="button">
+                Logout
+              </button>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="{% url 'products' %}">
+              <button class="btn btn-white" type="button">
+                Gift Card
+              </button>
+            </a>
+          </li>
+          {% else %}
+          <li class="list-inline-item">
+            <div class="dropdown">
+              <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Gift Cards
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              </ul>
+          </li>
+          {% endif %}
+          {% if request.user.is_authenticated %}
+          <li class="list-inline-item">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+              href="{% url 'view_bag' %}">
+              <div class="text-center">
+                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                <p class="my-0">
+                  {% if total %}
+                  ${{ total|floatformat:2 }}
+                  {% else %}
+                  $0.00
+                  {% endif %}
+                </p>
+              </div>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 text-end">
+        {% include 'includes/sm-header.html' %}
+      </div>
+    </div>
+  </header>
 
-    <!--message container-->
-    {% if messages %}
-        <div class="message-container">
-          {% for message in messages %}
-            {% include 'includes/toasts/toast_success.html' %}
-          {% endfor %}
-        </div>
-    {% endif %}
+  <!--message container-->
+  {% if messages %}
+  <div class="message-container">
+    {% for message in messages %}
+    {% include 'includes/toasts/toast_success.html' %}
+    {% endfor %}
+  </div>
+  {% endif %}
 
-    <!--page header block-->
-    {% block page_header %}
-    {% endblock %}
+  <!--page header block-->
+  {% block page_header %}
+  {% endblock %}
 
-    <!--main block-->
-    {% block content %}
-    {% endblock %}
+  <!--main block-->
+  {% block content %}
+  {% endblock %}
 
-    <!--js block-->
-    {% block postloadjs %}
-    <script>
-      const toasts = document.querySelectorAll('.toast')
-      toasts.forEach(toast => {
-        let NewToast = new bootstrap.Toast(toast)
-        toast.classList.add('show')
-        toast.show()
-      })
-    </script>
-    <script type='text/javascript'>
-      (function ($) {
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[0]='EMAIL';
-        ftypes[0]='email';
-        fnames[1]='FNAME';
-        ftypes[1]='text';
-        fnames[2]='LNAME';
-        ftypes[2]='text';
-        fnames[3]='ADDRESS';
-        ftypes[3]='address';
-        fnames[4]='PHONE';
-        ftypes[4]='phone';
-        fnames[5]='BIRTHDAY';
-        ftypes[5]='birthday';
-      }(jQuery));
-      var $mcj = jQuery.noConflict(true);
-    </script>
-    {% endblock %}
+  <!--js block-->
+  {% block postloadjs %}
+  <script>
+    const toasts = document.querySelectorAll('.toast')
+    toasts.forEach(toast => {
+      let NewToast = new bootstrap.Toast(toast)
+      toast.classList.add('show')
+      toast.show()
+    })
+  </script>
+  <script type='text/javascript'>
+    (function ($) {
+      window.fnames = new Array();
+      window.ftypes = new Array();
+      fnames[0] = 'EMAIL';
+      ftypes[0] = 'email';
+      fnames[1] = 'FNAME';
+      ftypes[1] = 'text';
+      fnames[2] = 'LNAME';
+      ftypes[2] = 'text';
+      fnames[3] = 'ADDRESS';
+      ftypes[3] = 'address';
+      fnames[4] = 'PHONE';
+      ftypes[4] = 'phone';
+      fnames[5] = 'BIRTHDAY';
+      ftypes[5] = 'birthday';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+  </script>
+  {% endblock %}
 
-  </body>
+</body>
+
 </html>
