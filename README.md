@@ -97,7 +97,7 @@ As a customer,  I would like
 - ### Gift Card
   - The gift card page allows you to choose the type and quantity of gift cards that the user wants to purchase.
 
- ![GiftCard](media/product.png)
+ ![GiftCard](media/product1.png)
 
 
 - ### Shopping Bag
