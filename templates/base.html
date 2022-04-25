@@ -103,6 +103,7 @@
                 <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
                 <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
               </ul>
+            </div>
           </li>
           {% endif %}
           {% if request.user.is_authenticated %}
