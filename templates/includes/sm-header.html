@@ -7,21 +7,21 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <li class="dropdown-item" ><a href="{% url 'home' %}" class="nav-link text-black">Home</a></li>
-                    <ul class="dropdown-item text-muted list-unstyled">Treatments
-                        <li><a href="{% url 'treatments' %}" class="dropdown-item">All Treatments</a></li>
-                        <li><a href="{% url 'nail_care' %}" class="dropdown-item">Nail Care</a></li>
-                        <li><a href="{% url 'eye_care' %}" class="dropdown-item">Eye Care</a></li>
-                        <li><a href="{% url 'facial' %}" class="dropdown-item">Facials</a></li>
-                    </ul>
-                    <ul class="dropdown-item text-muted list-unstyled">Profile
+                    <li class="dropdown-item text-muted list-unstyled">Treatments
+                        <a href="{% url 'treatments' %}" class="dropdown-item">All Treatments</a>
+                        <a href="{% url 'nail_care' %}" class="dropdown-item">Nail Care</a>
+                        <a href="{% url 'eye_care' %}" class="dropdown-item">Eye Care</a>
+                        <a href="{% url 'facial' %}" class="dropdown-item">Facials</a>
+                    </li>
+                    <li class="dropdown-item text-muted list-unstyled">Profile
                         {% if request.user.is_authenticated %}
-                            <li><a href="{% url 'products' %}" class="dropdown-item">Gift Card</a></li>
-                            <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                            <a href="{% url 'products' %}" class="dropdown-item">Gift Card</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                         {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                         {% endif %}
-                    </ul>
+                    </li>
                 </ul>
             </div>
         </li>
