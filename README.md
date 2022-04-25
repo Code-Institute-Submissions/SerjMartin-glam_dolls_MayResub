@@ -215,7 +215,29 @@ Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
   - HTML code is validated throught [W3 validatdor](https://validator.w3.org/).
      Result came out as follows.
 
-  ![html-validator](media/html-validator.png)
+    - Home page
+  ![html-validator](media/home.png)
+
+    - Eye Care page
+  ![html-validator](media/eye.png)
+
+    - Naile Care page
+  ![html-validator](media/nail.png)
+
+    - Facial page
+  ![html-validator](media/facial.png)
+
+    - Product page
+  ![html-validator](media/product.png)
+
+    - Bag page
+  ![html-validator](media/bag.png)
+
+    - Login page
+  ![html-validator](media/login.png)
+
+    - Logout page
+  ![html-validator](media/logout.png)
 
   - CSS code is validated throught [W3 Jigsaw](https://jigsaw.w3.org/css-validator/)
 
@@ -227,7 +249,7 @@ Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
 
   - Python code is validated throught [PEP8](http://pep8online.com/)
 
-  ![python-validator](media/pep8-validator.png)
+  ![python-validator](media/python.png)
 
 
 
