@@ -70,10 +70,10 @@
                 Treatments
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                <a href="{% url 'treatments' %}" class="dropdown-item">All Treatments</a>
-                <a href="{% url 'nail_care' %}" class="dropdown-item">Nail Care</a>
-                <a href="{% url 'eye_care' %}" class="dropdown-item">Eye Care</a>
-                <a href="{% url 'facial' %}" class="dropdown-item">Facials</a>
+                <li><a href="{% url 'treatments' %}" class="dropdown-item">All Treatments</a></li>
+                <li><a href="{% url 'nail_care' %}" class="dropdown-item">Nail Care</a></li>
+                <li><a href="{% url 'eye_care' %}" class="dropdown-item">Eye Care</a></li>
+                <li><a href="{% url 'facial' %}" class="dropdown-item">Facials</a></li>
               </ul>
             </div>
           </li>
@@ -100,8 +100,8 @@
                 Gift Cards
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
               </ul>
           </li>
           {% endif %}
