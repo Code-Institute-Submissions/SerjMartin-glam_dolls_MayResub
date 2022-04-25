@@ -112,6 +112,9 @@ As a customer,  I would like
 
  ![FaceBook](media/facebook.png)
 
+## Future Features
+   - In the future, I plan to implement functionality that allows emails being sent to the user upon payment confirmation. I opted to not use Stripe webhooks for the projects, as this was not a requirement for assessment. I could have used Python to automate an email being sent, but as this is not a requirement on the assessment criteria, I have opted to leave this out for now, and plan to implement this feature later at point.
+
 
 ## Technologies Used
 
