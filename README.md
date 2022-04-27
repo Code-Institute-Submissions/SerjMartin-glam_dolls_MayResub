@@ -260,7 +260,34 @@ Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
 
   ![python-validator](media/python.png)
 
+ ### User Story Testing
 
+  - As **Site User** I want to be able to **easily register for an account** so that I can **have a personal account and be able to view my profile**
+    - As **Site User** I want to be able to **easily login or logout** so that I can **access my personal account information**
+    - As **Site User** I want to be able to **easily recover my password in case I forget it** so that I can **recovery access to my account**
+    - As **Site User** I want to be able to **receive an email confirmation after registering** so that I can **verify that my account registration was successful**
+    - As **User** I want to be able to **view the type of vouchers** so that I can **select one to purchase**
+    ![GiftCard](media/product1.png)
+
+    - As **User** I want to be able to **view individual procedure details** so that I can **identify the price, description**
+    ![AllTreatmets](media/all-treatments.png)
+
+    - As **User** I want to be able to **view a specific category of procedure** so that I can **quickly find in what I am interested in**
+    ![Icons](media/category-icons.png)
+
+    - As **User** I want to be able to **subscribe** so that  I can **receive the offers by email**
+    ![Footer](media/footer.png)
+
+    - As **Shopper** I want to be able to **easily select the type of the voucher** so that I can **ensure I don't accidentally select the wrong one**
+    ![GiftCard](media/product1.png)
+
+    - As **Shopper** I want to be able to **view items in my bag to be purchased** so that I can **identify the total cost of my purchase**
+    ![ShoppingBag](media/shopping-bag.png)
+
+    - As **Shopper** I want to be able to **adjust the quantity of individual items in my bag** so that I can **easily make changes to my purchase before checkout**
+    - As **Shopper** I want to be able to **easily enter my payment information** so that I can **check out quickly and no hassles**
+    - As **Shopper** I want to be able to **feel my personal and payment information is safe and secure** so that I can **confidently provide needed information to make a purchase**
+    - As **Shopper** I want to be able to **view an order confirmation after checkout** so that I can **verify that I haven't made any mistake**
 
 ## Deployment
 
