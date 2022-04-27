@@ -44,7 +44,7 @@ As a customer,  I would like
     - As **Site User** I want to be able to **easily login or logout** so that I can **access my personal account information**
     - As **Site User** I want to be able to **easily recover my password in case I forget it** so that I can **recovery access to my account**
     - As **Site User** I want to be able to **receive an email confirmation after registering** so that I can **verify that my account registration was successful**
-    - As **Site User** I want to be able to **have a personalized user profile** so that I can **view my personal order history and order confirmation, and see my payment information**
+
 
  - ## Viewing and Navigation
     - As **User** I want to be able to **view the type of vouchers** so that I can **select one to purchase**
@@ -114,6 +114,12 @@ As a customer,  I would like
 
 ## Future Features
    - In the future, I plan to implement functionality that allows emails being sent to the user upon payment confirmation. I opted to not use Stripe webhooks for the projects, as this was not a requirement for assessment. I could have used Python to automate an email being sent, but as this is not a requirement on the assessment criteria, I have opted to leave this out for now, and plan to implement this feature later at point.
+
+   - I plan to implement functionality that allows the user to have a personalized user profile so that they can view their personal order history and order confirmation, and see their payment information.
+
+   - I plan to implement functionality that allows user to book their appointments online.
+
+   - I plan to implement a Google map that allows users easily to see the salon's location.
 
 
 ## Technologies Used
