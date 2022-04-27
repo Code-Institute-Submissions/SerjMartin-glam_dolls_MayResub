@@ -54,7 +54,7 @@ As a customer,  I would like
 
   - ## Purchasing and Checkout
     - As **Shopper** I want to be able to **easily select the type of the voucher** so that I can **ensure I don't accidentally select the wrong one**
-    - As **Shopper** I want to be able to **view items in my bat to be purchased** so that I can **identify the total cost of my purchase**
+    - As **Shopper** I want to be able to **view items in my bag to be purchased** so that I can **identify the total cost of my purchase**
     - As **Shopper** I want to be able to **adjust the quantity of individual items in my bag** so that I can **easily make changes to my purchase before checkout**
     - As **Shopper** I want to be able to **easily enter my payment information** so that I can **check out quickly and no hassles**
     - As **Shopper** I want to be able to **feel my personal and payment information is safe and secure** so that I can **confidently provide needed information to make a purchase**
