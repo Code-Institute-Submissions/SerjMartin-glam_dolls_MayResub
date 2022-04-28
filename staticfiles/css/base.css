@@ -1,0 +1,101 @@
+/* font-family: 'Lato', sans-serif;
+font-family: 'Teko', sans-serif; */
+
+/* base html */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.home-image{
+    background: url('/media/background1.jpeg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    margin-top:0;
+}
+
+.eye-care-image {
+    background: url('/media/eye-care.jpeg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    margin-top:0;
+}
+
+.facial-image {
+    background: url('/media/facial.jpeg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    margin-top:0;
+}
+
+.nail-care-image {
+    background: url('/media/nail-care.jpeg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    margin-top:0;
+}
+
+/* header */
+
+.logo {
+    font-family: 'Italianno', cursive;
+    font-size: 400%;
+    font-weight: 400;
+    color: #f87d7d;
+}
+
+.fa-shopping-bag {
+    color: #f87d7d !important;
+}
+
+.navbar {
+    background-color: #fcccd4;
+}
+
+.fs-3 {
+    font-family: 'Italianno', cursive;
+    font-size: 300% !important;
+    font-weight: 300 !important;
+}
+
+.ficons {
+    font-size: 200%;
+}
+
+footer {
+    background-color: #fde2e6;
+}
+
+.footer-form {
+    background-color: #fcccd4;
+}
+
+/* bag.html */
+
+.update-qty,
+.remove-item {
+    cursor: pointer;
+}
+
+.toast {
+    position: fixed;
+    top: 60px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+/* Mailchimp */
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: auto;
+}
