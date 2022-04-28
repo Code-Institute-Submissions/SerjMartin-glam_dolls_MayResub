@@ -259,6 +259,11 @@ Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
   - Python code is validated throught [PEP8](http://pep8online.com/)
 
   ![python-validator](media/python.png)
+  ![python-validator](media/python1.png)
+  ![python-validator](media/python3.png)
+  ![python-validator](media/python4.png)
+  ![python-validator](media/python5.png)
+  ![python-validator](media/python6.png)
 
  ### User Story Testing
 
