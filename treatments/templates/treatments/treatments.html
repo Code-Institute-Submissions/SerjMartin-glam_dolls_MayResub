@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-6 pe-5">
                 <div class="card border-0">
-                    <img src="{% static 'image/nail-care.jpeg' %}" class="card-img-top" alt="nailcare">
+                    <img src="{% static 'media/nail-care.jpeg' %}" class="card-img-top" alt="nailcare">
                     <div class="card-body">
                         <h2 class="card-title text-center mb-4">Nail Care</h2>
                         {% for treatment in treatments %}
@@ -32,7 +32,7 @@
                 </div>
                 <div class="col mt-3">
                     <div class="card border-0">
-                        <img src="/media/eye-care.jpeg" class="card-img-top" alt="eyecare">
+                        <img src="{% static 'media/eye-care.jpeg' %}" class="card-img-top" alt="eyecare">
                         <div class="card-body">
                             <h2 class="card-title text-center mb-4">Eye Care</h2>
                             {% for treatment in treatments %}
@@ -56,7 +56,7 @@
             </div>
             <div class="col-sm-12 col-md-6 ps-5">
                 <div class="card border-0">
-                    <img src="/media/facial.jpeg" class="card-img-top" alt="nailcare">
+                    <img src="{% static 'media/facial.jpeg' %}" class="card-img-top" alt="nailcare">
                     <div class="card-body">
                         <h2 class="card-title text-center mb-4">Facial</h2>
                         {% for treatment in treatments %}

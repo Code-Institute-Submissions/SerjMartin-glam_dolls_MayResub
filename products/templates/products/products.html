@@ -15,9 +15,9 @@
                             <div class="col-sm-12 col-md-6 p-5">
                                 <div class="card border-0">
                                     {% if product.name == 'Voucher 25€' %}
-                                        <img src="/media/voucher25.png" class="card-img-top border border-dark" alt="voucher25">
+                                        <img src="{% static 'media/voucher25.png' %}" class="card-img-top border border-dark" alt="voucher25">
                                     {% else %}
-                                        <img src="/media/voucher50.png" class="card-img-top border border-dark" alt="voucher50">
+                                        <img src="{% static 'media/voucher50.png' %}" class="card-img-top border border-dark" alt="voucher50">
                                     {% endif %}
                                     <div class="card-body">
                                       <h5 class="card-title">{{ product.name }}</h5>
