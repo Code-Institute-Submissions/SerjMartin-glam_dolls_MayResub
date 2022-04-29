@@ -8,7 +8,7 @@ You also have the ability to subscribe for the newest news on offers or discount
 
 [Live Website](https://glam-dolls.herokuapp.com/)
 
-![Responsice Mockup](media/mockup.png)
+![Responsice Mockup](static/media/mockup.png)
 
 ## Table of Contents
   - [Business Goals](#business-goals)
@@ -71,13 +71,13 @@ As a customer,  I would like
   - The Gift Card button serves as a Gift Card page link where users can choose the gift card type that they want to purchase.
   - BAG: Everytime a product is added to the cart, the bag gets updated with the item, price and quantity.
 
- ![NavBar](media/nav-bar.png)
+ ![NavBar](static/media/nav-bar.png)
 
 
 - ### Category Icons
   - The Icons serve as links to the specific categories of treatments.
 
- ![Icons](media/category-icons.png)
+ ![Icons](static/media/category-icons.png)
 
 
 - ### Footer
@@ -85,32 +85,32 @@ As a customer,  I would like
   - By clicking on the Facebook icon it brings you to the GlamDoll Facebook page.
   - The subscriptions section allows you to subscribe to news to stay updated.
 
- ![Footer](media/footer.png)
+ ![Footer](static/media/footer.png)
 
 
 - ### All Treatments
   - The all Treatments page shows the user all the treatments offered by GlamDolls beauty salon.
 
- ![AllTreatmets](media/all-treatments.png)
+ ![AllTreatmets](static/media/all-treatments.png)
 
 
 - ### Gift Card
   - The gift card page allows you to choose the type and quantity of gift cards that the user wants to purchase.
 
- ![GiftCard](media/product1.png)
+ ![GiftCard](static/media/product1.png)
 
 
 - ### Shopping Bag
   - This page allows you to purchase anything that the user has added to their bag.
 
- ![ShoppingBag](media/shopping-bag.png)
+ ![ShoppingBag](static/media/shopping-bag.png)
 
 
 - ### FaceBook page
 
   [Live FaceBook page!](https://www.facebook.com/GlamDolls-105004535497850)
 
- ![FaceBook](media/facebook.png)
+ ![FaceBook](static/media/facebook.png)
 
 ## Future Features
    - In the future, I plan to implement functionality that allows emails being sent to the user upon payment confirmation. I opted to not use Stripe webhooks for the projects, as this was not a requirement for assessment. I could have used Python to automate an email being sent, but as this is not a requirement on the assessment criteria, I have opted to leave this out for now, and plan to implement this feature later at point.
@@ -128,7 +128,7 @@ __Balsmiq Wireframe__
 
  The Wireframe of this website was built in [Balsamic](https://balsamiq.cloud/)
 
-  ![Wireframe](media/wireframe.png)
+  ![Wireframe](static/media/wireframe.png)
 
 ### Libraries
 
@@ -225,89 +225,89 @@ Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
      Result came out as follows.
 
     - Home page
-  ![html-validator](media/home.png)
+  ![html-validator](static/media/home.png)
 
     - Eye Care page
-  ![html-validator](media/eye.png)
+  ![html-validator](static/media/eye.png)
 
     - Naile Care page
-  ![html-validator](media/nail.png)
+  ![html-validator](static/media/nail.png)
 
     - Facial page
-  ![html-validator](media/facial.png)
+  ![html-validator](static/media/facial.png)
 
     - Product page
-  ![html-validator](media/product.png)
+  ![html-validator](static/media/product.png)
 
     - Bag page
-  ![html-validator](media/bag.png)
+  ![html-validator](static/media/bag.png)
 
     - Login page
-  ![html-validator](media/login.png)
+  ![html-validator](static/media/login.png)
 
     - Logout page
-  ![html-validator](media/logout.png)
+  ![html-validator](static/media/logout.png)
 
   - CSS code is validated throught [W3 Jigsaw](https://jigsaw.w3.org/css-validator/)
 
-  ![css-validator](media/css-validator.png)
+  ![css-validator](static/media/css-validator.png)
 
   - JavaScript code is validated throught [JS Hint](https://jshint.com/)
 
-  ![js-validator](media/jsHint-validator.png)
+  ![js-validator](static/media/js1.png)
 
   - Python code is validated throught [PEP8](http://pep8online.com/)
 
-  ![python-validator](media/python.png)
-  ![python-validator](media/python1.png)
-  ![python-validator](media/python3.png)
-  ![python-validator](media/python4.png)
-  ![python-validator](media/python5.png)
-  ![python-validator](media/python6.png)
+  ![python-validator](static/media/python.png)
+  ![python-validator](static/media/python1.png)
+  ![python-validator](static/media/python3.png)
+  ![python-validator](static/media/python4.png)
+  ![python-validator](static/media/python5.png)
+  ![python-validator](static/media/python6.png)
 
  ### User Story Testing
 
   - As **Site User** I want to be able to **easily register for an account** so that I can **have a personal account and be able to view my profile**
-  ![Register](media/register3.png)
+  ![Register](static/media/register3.png)
 
   - As **Site User** I want to be able to **easily login or logout** so that I can **access my personal account information**
-  ![Login](media/login3.png)
+  ![Login](static/media/login3.png)
 
   - As **Site User** I want to be able to **easily recover my password in case I forget it** so that I can **recovery access to my account**
-  ![Recovery](media/reset-passsword3.png)
+  ![Recovery](static/media/reset-passsword3.png)
 
   - As **Site User** I want to be able to **receive an email confirmation after registering** so that I can **verify that my account registration was successful**
-  ![Email Confirmation](media/email-confirmation3.png)
+  ![Email Confirmation](static/media/email-confirmation3.png)
 
   - As **User** I want to be able to **view the type of vouchers** so that I can **select one to purchase**
-  ![GiftCard](media/product1.png)
+  ![GiftCard](static/media/product1.png)
 
   - As **User** I want to be able to **view individual procedure details** so that I can **identify the price, description**
-  ![AllTreatmets](media/all-treatments.png)
+  ![AllTreatmets](static/media/all-treatments.png)
 
   - As **User** I want to be able to **view a specific category of procedure** so that I can **quickly find in what I am interested in**
-  ![Icons](media/category-icons.png)
+  ![Icons](static/media/category-icons.png)
 
   - As **User** I want to be able to **subscribe** so that  I can **receive the offers by email**
-  ![Footer](media/footer.png)
+  ![Footer](static/media/footer.png)
 
   - As **Shopper** I want to be able to **easily select the type of the voucher** so that I can **ensure I don't accidentally select the wrong one**
-  ![GiftCard](media/product1.png)
+  ![GiftCard](static/media/product1.png)
 
   - As **Shopper** I want to be able to **view items in my bag to be purchased** so that I can **identify the total cost of my purchase**
-  ![ShoppingBag](media/shopping-bag.png)
+  ![ShoppingBag](static/media/shopping-bag.png)
 
   - As **Shopper** I want to be able to **adjust the quantity of individual items in my bag** so that I can **easily make changes to my purchase before checkout**
-  ![Qty](media/adjustment3.png)
+  ![Qty](static/media/adjustment3.png)
 
   - As **Shopper** I want to be able to **easily enter my payment information** so that I can **check out quickly and no hassles**
-  ![Checkout](media/checkout2.png)
+  ![Checkout](static/media/checkout2.png)
 
   - As **Shopper** I want to be able to **feel my personal and payment information is safe and secure** so that I can **confidently provide needed information to make a purchase**
-  ![Checkout](media/checkout3.png)
+  ![Checkout](static/media/checkout3.png)
 
   - As **Shopper** I want to be able to **view an order confirmation after checkout** so that I can **verify that I haven't made any mistake**
-  ![Confirmation](media//canfirmation-page.png)
+  ![Confirmation](static/media//canfirmation-page.png)
 
 ## Deployment
 
