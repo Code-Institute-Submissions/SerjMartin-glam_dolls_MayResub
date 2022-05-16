@@ -16,8 +16,11 @@
                                 <div class="card border-0">
                                     {% if product.name == 'Voucher 25€' %}
                                         <img src="{% static 'media/voucher25.png' %}" class="card-img-top border border-dark" alt="voucher25">
-                                    {% else %}
+                                    {% elif product.name == 'Voucher 50€' %}
                                         <img src="{% static 'media/voucher50.png' %}" class="card-img-top border border-dark" alt="voucher50">
+                                    {% else %}
+                                        <img class="card-img-top border border-dark" src="{{ item.product.image }}" alt="{{ product.name }}">
+                                        <!-- <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}"> -->
                                     {% endif %}
                                     <div class="card-body">
                                       <h5 class="card-title">{{ product.name }}</h5>

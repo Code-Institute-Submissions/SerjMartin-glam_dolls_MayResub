@@ -13,8 +13,11 @@
                         <a href="{% url 'eye_care' %}" class="dropdown-item">Eye Care</a>
                         <a href="{% url 'facial' %}" class="dropdown-item">Facials</a>
                     </li>
-                    <li class="dropdown-item text-muted list-unstyled">Profile
+                    <li class="dropdown-item text-muted list-unstyled">My Account
                         {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                            {% endif %}
                             <a href="{% url 'products' %}" class="dropdown-item">Gift Card</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                         {% else %}

@@ -26,11 +26,12 @@
                         <tr class="text-center">
                             <td class="col-4 pt-3">
                                 {% if item.product.name == 'Voucher 50€' %}
-                                <img src="{% static 'media/voucher50.png' %}" class="card-img-top border border-dark"
-                                    alt="voucher50">
+                                    <img src="{% static 'media/voucher50.png' %}" class="card-img-top border border-dark"
+                                        alt="voucher50">
+                                {% elif product.name == 'Voucher 50€' %}
+                                    <img src="{% static 'media/voucher50.png' %}" class="card-img-top border border-dark" alt="voucher50">
                                 {% else %}
-                                <img src="{% static 'media/voucher25.png' %}" class="card-img-top border border-dark"
-                                    alt="voucher25">
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 {% endif %}
                                 <!-- <img class="img-thumbnail border-dark rounded" src="{{item.product.image.url}}" alt="product-image"> -->
                             </td>

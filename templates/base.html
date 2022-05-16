@@ -78,20 +78,31 @@
             </div>
           </li>
           {% if request.user.is_authenticated %}
-
-          <a href="{% url 'account_logout' %}" class="list-inline-item">
-            <button class="btn btn-white" type="button">
-              Logout
+          <div class="dropdown list-inline-item">
+            <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              My Account
             </button>
-          </a>
-
-
-          <a href="{% url 'products' %}" class="list-inline-item">
-            <button class="btn btn-white" type="button">
-              Gift Card
-            </button>
-          </a>
-
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+              {% if request.user.is_superuser %}
+              <li><a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
+              {% endif %}
+              <li>
+                <a href="{% url 'account_logout' %}" class="list-inline-item">
+                  <button class="btn btn-white" type="button">
+                    Logout
+                  </button>
+                </a>
+              </li>
+              <li>
+                <a href="{% url 'products' %}" class="list-inline-item">
+                  <button class="btn btn-white" type="button">
+                    Gift Card
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
           {% else %}
           <li class="list-inline-item">
             <div class="dropdown">
