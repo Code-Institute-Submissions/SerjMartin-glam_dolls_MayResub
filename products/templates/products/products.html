@@ -14,14 +14,7 @@
                         {% for product in products %}
                             <div class="col-sm-12 col-md-6 p-5">
                                 <div class="card border-0">
-                                    {% if product.name == 'Voucher 25€' %}
-                                        <img src="{% static 'media/voucher25.png' %}" class="card-img-top border border-dark" alt="voucher25">
-                                    {% elif product.name == 'Voucher 50€' %}
-                                        <img src="{% static 'media/voucher50.png' %}" class="card-img-top border border-dark" alt="voucher50">
-                                    {% else %}
-                                        <img class="card-img-top border border-dark" src="{{ item.product.image }}" alt="{{ product.name }}">
-                                        <!-- <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}"> -->
-                                    {% endif %}
+                                    <img src="{% static 'media/voucher.png' %}" class="card-img-top border border-dark" alt="voucher">
                                     <div class="card-body">
                                       <h5 class="card-title">{{ product.name }}</h5>
                                       <p class="card-text">{{ product.description }}</p>
@@ -29,6 +22,12 @@
                                     <div class="card-footer">
                                         Prce:  €{{ product.price }}
                                     </div>
+                                    {% if request.user.is_superuser %}
+                                    <div class="row col-12 mt-4">
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                        <a href="{% url 'delete_product' product.id %}" class="text-denger">Delete</a>
+                                    </div>
+                                    {% endif %}
                                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                                         {% csrf_token %}
                                         <div class="row col-12 mt-4">

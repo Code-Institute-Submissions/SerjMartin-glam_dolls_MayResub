@@ -27,3 +27,6 @@ urlpatterns = [
     path('bag/', include('bag.urls')),
     path('checkout/', include('checkout.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'glamdolls.views.handler404'
+handler500 = 'glamdolls.views.handler500'
