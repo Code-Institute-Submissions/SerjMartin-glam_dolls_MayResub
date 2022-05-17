@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <hr class="w-30">
+    <h4 class="ms-2">Oops, something went wrong.
+        Try to refresh this page or feel free to contact us if
+        the problem persists.
+    </h4>
+    <img src="{% static 'media/404.webp' %}" class="img-fluid nail-care-image" alt="404">
+    <hr class="w-30">
+    {% include 'includes/icons.html' %}
+    {% include 'includes/footer.html' %}
+</div>
+{% endblock %}
