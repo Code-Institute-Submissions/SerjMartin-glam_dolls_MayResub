@@ -95,16 +95,27 @@ As a customer,  I would like
 
 
 - ### Gift Card
-  - The gift card page allows you to choose the type and quantity of gift cards that the user wants to purchase.
+  - The gift card page allows you to choose the type and quantity of gift cards that the user wants to purchase and only for authorised persons allowed to edit /delete the product.
 
  ![GiftCard](static/media/product2.png)
 
 
 - ### Shopping Bag
-  - This page allows you to purchase anything that the user has added to their bag.
 
  ![ShoppingBag](static/media/bag2.png)
 
+- ### Product Managment
+   - This page allows you to add a product only for authorised persons.
+
+  ![Admin](static/media/admin-add.png)
+
+- ### 404 page
+
+ ![404](static/media/img404.png)
+
+- ### 500 page
+
+  ![500](static/media/img500.png)
 
 - ### FaceBook page
 
@@ -166,8 +177,8 @@ __Data Base Wireframe__
 ### Database
 Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
 
- - Treatments app
 
+ - Treatments app(Treatment)
 
 | Name | Key | Type | Extra Info |
 | :--------------: | :----------------: | :--------------: | :----------------: |
@@ -176,6 +187,17 @@ Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
 | Description | description | TextField | null=True, blank=True |
 | Price | price | DecimalField | max_digits=6, decimal_places=2 |
 | Deals | deals | CharField | max_length=254, null=True, blank=True |
+
+
+ - Treatments app(Category)
+
+| Name | Key | Type | Extra Info |
+| :--------------: | :----------------: | :--------------: | :----------------: |
+| Name | name | CharField | max_length=254 |
+| Image | image | ImageField | null=True, blank=True |
+
+
+
 
 
  - Product app
