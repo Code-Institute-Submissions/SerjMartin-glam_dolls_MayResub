@@ -97,13 +97,13 @@ As a customer,  I would like
 - ### Gift Card
   - The gift card page allows you to choose the type and quantity of gift cards that the user wants to purchase.
 
- ![GiftCard](static/media/product1.png)
+ ![GiftCard](static/media/product2.png)
 
 
 - ### Shopping Bag
   - This page allows you to purchase anything that the user has added to their bag.
 
- ![ShoppingBag](static/media/shopping-bag.png)
+ ![ShoppingBag](static/media/bag2.png)
 
 
 - ### FaceBook page
@@ -122,13 +122,27 @@ As a customer,  I would like
    - I plan to implement a Google map that allows users easily to see the salon's location.
 
 
-## Technologies Used
+### Technologies Used
+
+ ## Wireframe
 
 __Balsmiq Wireframe__
 
  The Wireframe of this website was built in [Balsamic](https://balsamiq.cloud/)
 
   ![Wireframe](static/media/wireframe.png)
+
+__Data Base Wireframe__
+
+ The Wireframe of this website was built in [Diagrams](https://app.diagrams.net/)
+
+  - Product and Checkout apps
+
+  ![Diagrame1](static/media/diagram.png)
+
+  - Treatments app
+
+  ![Diagrame1](static/media/diagram1.png)
 
 ### Libraries
 
@@ -171,9 +185,6 @@ Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
 | Name | name | CharField | max_length=254 |
 | Description | description | TextField |  |
 | Price | price | DecimalField | max_digits=6, decimal_places=2 |
-| Image url | image_url | URLField | max_length=1024, null=True, blank=True |
-| Image | image | ImageField | null=True, blank=True |
-
 
  - Checkout app (Order)
 
@@ -280,7 +291,7 @@ Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
   ![Email Confirmation](static/media/email-confirmation3.png)
 
   - As **User** I want to be able to **view the type of vouchers** so that I can **select one to purchase**
-  ![GiftCard](static/media/product1.png)
+  ![GiftCard](static/media/product2.png)
 
   - As **User** I want to be able to **view individual procedure details** so that I can **identify the price, description**
   ![AllTreatmets](static/media/all-treatments.png)
@@ -292,13 +303,13 @@ Used [SQL](https://www.w3schools.com/sql/default.asp) database by default.
   ![Footer](static/media/footer.png)
 
   - As **Shopper** I want to be able to **easily select the type of the voucher** so that I can **ensure I don't accidentally select the wrong one**
-  ![GiftCard](static/media/product1.png)
+  ![GiftCard](static/media/product2.png)
 
   - As **Shopper** I want to be able to **view items in my bag to be purchased** so that I can **identify the total cost of my purchase**
-  ![ShoppingBag](static/media/shopping-bag.png)
+  ![ShoppingBag](static/media/bag2.png)
 
   - As **Shopper** I want to be able to **adjust the quantity of individual items in my bag** so that I can **easily make changes to my purchase before checkout**
-  ![Qty](static/media/adjustment3.png)
+  ![Qty](static/media/bag2.png)
 
   - As **Shopper** I want to be able to **easily enter my payment information** so that I can **check out quickly and no hassles**
   ![Checkout](static/media/checkout2.png)
